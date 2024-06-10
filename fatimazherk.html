@@ -1,1 +1,425 @@
-portfolio
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatimaa's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #001B33;
+            color: #FFF;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: #12123E;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #9999E2;
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9C97F1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .firstSection {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .leftSection {
+            font-size: 2.3rem;
+            width: 60%;
+            margin: 30px 0;
+        }
+
+        .leftSection .gradient-button {
+            position: relative;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: 8px solid transparent;
+            border-radius: 50px;
+            cursor: pointer;
+            outline: none;
+            background: linear-gradient(45deg, #704994, hsl(323, 58%, 37%));
+            background-size: 200% 200%;
+            animation: gradientAnimation 4s ease infinite;
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .leftSection .gradient-button::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #E068B2, #519FE7);
+            z-index: -1;
+        }
+
+        .leftSection .gradient-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .rightSection img {
+            align-content: flex-end;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .image-top{
+            top:122px;
+        }
+
+        .purple {
+            color: #AA6BE4;
+            font-weight: bold;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: #AA6BE4;
+        }
+
+        .secondSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        body {
+            min-width: fit-content;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            background: #1D1D49;
+            margin: 56px 0;
+            padding: 20px;
+            border-radius: 8px;
+            color: black;
+            width: 80%;
+        }
+
+        .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: black;
+            margin: 0 20px;
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .horizontal-title {
+            color: #7F37C2;
+            position: relative;
+            top: 3px;
+            width: 150px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .horizontal-desc {
+            top: 75px;
+            color: gray;
+            width: 1000px;
+            font-size: 12px;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 23px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin: 8px 0;
+        }
+
+        .footer > div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .box {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .horizontal-title,
+            .horizontal-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                background: white;
+                height: auto;
+                margin: 20px 0;
+            }
+
+            .secondSection .vertical {
+                height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 6vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            footer {
+                display: none;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .rightSection {
+                width: 100% !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Fatimaa's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Glimpses</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>My name is <span class="purple">Fatimaa Khan</span></div>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="gradient-button">Download Resume</button>
+                    <button class="gradient-button">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="me.jpg" alt="Fatimaa's Picture">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondSection">
+            <span class="text-gray">What I Have Achieved So Far:</span>
+            <h1>Past Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="code.jpg" alt="Programming">
+                </div>
+                <div>
+                    <div class="horizontal-title">
+                        ---> C/C++ Programmer (2022-2024)
+                    </div>
+                    <div class="horizontal-desc">
+                        I started off my programming journey in 2022 during college. Prior to this, I knew how to make pseudocodes, flowcharts, and algorithms, but I started working with actual programming languages in my second year of college. Started off with C in my first year of college, currently learning C++ in the second semester of university.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="code.jpg" alt="Web Development">
+                </div>
+                <div>
+                    <div class="horizontal-title">
+                        ---> WebDev (2023-2024)
+                    </div>
+                    <div class="horizontal-desc">
+                        I started working with HTML, CSS, and JS during my ECAT phase. Since I am an aspiring web developer, I try to stay consistent with this hobby of mine.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="code.jpg" alt="Programming">
+                </div>
+                <div class="horizontal-title">
+                    ---> Photographer (2012-2024)
+                </div>
+
+                <div class="horizontal-desc">
+                    I am extremely fond of nature and interested in photography, hence, I love to take pictures and showcase that beauty from my lens.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Fatimaa's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Glimpses</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Glimpses</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Glimpses</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; fatimazherk.com | All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Student', 'WebDev', 'Photographer', 'Graphic Designer'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
